@@ -1,10 +1,10 @@
 package com.lamarrulla.empresa.entity;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import com.lamarrulla.empresa.vo.EmployeeVO;
+import jakarta.persistence.*;
 import lombok.Data;
+
+import java.util.List;
 
 @Data
 @Entity
@@ -12,6 +12,10 @@ public class Employee {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    private String name;
-    private String role;
+    @OneToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "personal_data_id", referencedColumnName = "id")
+    private PersonalData personalData;
+    @OneToMany(fetch = FetchType.LAZY)
+    @JoinColumn(name = "role_cat_id", referencedColumnName = "id")
+    private List<RoleCat> roleCat;
 }

@@ -9,12 +9,19 @@ import java.util.List;
 import java.util.stream.Collectors;
 @Component
 public class EmployeeMapperImpl implements IEmployeeMapper {
+
+    private final PersonalDataMapperImpl personalDataMapper;
+
+    public EmployeeMapperImpl(PersonalDataMapperImpl personalDataMapper) {
+        this.personalDataMapper = personalDataMapper;
+    }
+
     @Override
     public EmployeeDto toDTO(Employee employee) {
         EmployeeDto employeeDto = new EmployeeDto();
         employeeDto.setId(employee.getId());
-        employeeDto.setName(employee.getName());
-        employeeDto.setRole(employee.getRole());
+        employeeDto.setPersonalDataDto(personalDataMapper.toDTO(employee.getPersonalData()));
+        employeeDto.setRoleCat(employee.getRoleCat());
         return employeeDto;
     }
 
@@ -22,8 +29,8 @@ public class EmployeeMapperImpl implements IEmployeeMapper {
     public Employee toEntity(EmployeeDto employeeDto) {
         Employee employee = new Employee();
         employee.setId(employeeDto.getId());
-        employee.setName(employeeDto.getName());
-        employee.setRole(employeeDto.getRole());
+        employee.setPersonalData(personalDataMapper.toEntity(employeeDto.getPersonalDataDto()));
+        employee.setRoleCat(employeeDto.getRoleCat());
         return employee;
     }
 
