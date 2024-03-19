@@ -5,12 +5,13 @@ import lombok.Data;
 
 @Data
 @Entity
-public class CityCat {
+public class CommunityCat {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    private String cityName;
+    private String communityName;
+    private Long ZipCode;
     @ManyToOne
-    @JoinColumn(name = "state_cat_id", nullable = false)
-    private StateCat stateCat;
+    @JoinColumn(name = "city_cat_id", nullable = false)
+    private CityCat cityCat;
 }

@@ -8,5 +8,5 @@ public class StateCatDto {
     private Long id;
     private String stateName;
     private String stateCode;
-    private CountryCat countryCat;
+    private CountryCatDto countryCatDto;
 }

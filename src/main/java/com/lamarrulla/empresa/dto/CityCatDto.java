@@ -8,5 +8,5 @@ public class CityCatDto {
     private Long id;
     private String cityName;
     private Long postalCode;
-    private StateCat stateCat;
+    private StateCatDto stateCatDto;
 }
