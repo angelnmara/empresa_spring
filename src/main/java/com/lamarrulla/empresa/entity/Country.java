@@ -8,9 +8,10 @@ import lombok.Data;
 
 @Data
 @Entity
-public class RoleCat {
+public class Country {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    private String roleName;
+    private String countryName;
+    private String countryCode;
 }

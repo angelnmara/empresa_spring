@@ -14,7 +14,7 @@ public class RoleCatMapperImpl implements IRoleCatMapper {
     public RoleCatDto toDTO(RoleCat roleCat) {
         RoleCatDto roleCatDto = new RoleCatDto();
         roleCatDto.setId(roleCat.getId());
-        roleCatDto.setName(roleCat.getName());
+        roleCatDto.setName(roleCat.getRoleName());
         return roleCatDto;
     }
 
@@ -22,7 +22,7 @@ public class RoleCatMapperImpl implements IRoleCatMapper {
     public RoleCat toEntity(RoleCatDto roleCatDto) {
         RoleCat roleCat = new RoleCat();
         roleCat.setId(roleCatDto.getId());
-        roleCat.setName(roleCatDto.getName());
+        roleCat.setRoleName(roleCatDto.getName());
         return roleCat;
     }
 

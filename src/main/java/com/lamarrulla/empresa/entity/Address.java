@@ -8,9 +8,13 @@ import lombok.Data;
 
 @Data
 @Entity
-public class RoleCat {
+public class Address {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    private String roleName;
+    private String street;
+    private String internalNumber;
+    private String externalNumber;
+    private City city;
+    private State state;
 }
