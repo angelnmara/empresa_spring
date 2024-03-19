@@ -3,7 +3,7 @@ package com.lamarrulla.empresa.dto;
 import lombok.Data;
 
 @Data
-public class CountryDto {
+public class CountryCatDto {
     private Long id;
     private String countryName;
     private String countryCode;
