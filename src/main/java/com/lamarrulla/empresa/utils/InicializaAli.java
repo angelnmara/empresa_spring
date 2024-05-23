@@ -46,10 +46,7 @@ public class InicializaAli {
                 tokenDataDtoInit = tokenDataDto;
                 System.out.println(tokenDataDto.getAccess_token());
             }else{
-                System.out.println("Existe un error en el logeo");
-                Long count;
-                count = iTokenDataService.findAll().stream().count();
-                tokenDataDtoInit = iTokenDataService.findAll().get(count.intValue());
+                System.out.println("No se pudo crear el token");
             }
             /*if((Boolean) object.){
                 TokenDataDto tokenDataDto = JSON.parseObject(jsonObject.toString(), TokenDataDto.class);

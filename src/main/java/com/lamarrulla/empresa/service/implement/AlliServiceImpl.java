@@ -7,7 +7,11 @@ import com.global.iop.api.IopResponse;
 import com.global.iop.domain.Protocol;
 import com.global.iop.util.Constants;
 import com.global.iop.util.FileItem;
+import com.google.gson.Gson;
+import com.google.gson.JsonObject;
+import com.google.gson.JsonParser;
 import com.lamarrulla.empresa.dto.TokenDataDto;
+import com.lamarrulla.empresa.entity.Alli.Result;
 import com.lamarrulla.empresa.service.IAlliService;
 import com.lamarrulla.empresa.service.ITokenDataService;
 import org.springframework.stereotype.Service;
@@ -27,26 +31,31 @@ public class AlliServiceImpl implements IAlliService {
     }
 
     @Override
-    public String getProductsById(Integer id){
+    public Result getProductsById(String id){
         inicializa();
-        obtenerProducto();
-        return null;
+        return obtenerProducto(id);
     }
 
-    public void obtenerProducto(){
+    public Result obtenerProducto(String id){
+        Result result = new Result();
         try{
             //IopClient client = new IopClient(url, appkey, appSecret);
             IopRequest request = new IopRequest();
             request.setApiName("aliexpress.ds.product.get");
-            request.addApiParameter("ship_to_country", "US");
-            request.addApiParameter("product_id", "1005003784285827");
-            request.addApiParameter("target_currency", "USD");
-            request.addApiParameter("target_language", "en");
+            request.addApiParameter("ship_to_country", "MX");
+            request.addApiParameter("product_id", id);
+            request.addApiParameter("target_currency", "MXN");
+            request.addApiParameter("target_language", "es");
             IopResponse response = iopClient.execute(request, Protocol.TOP);
-            System.out.println(response.getGopResponseBody());
-            Thread.sleep(10);
+            Gson gson = new Gson();
+            JsonParser parser = new JsonParser();
+            JsonObject object = (JsonObject) parser.parse(response.getGopResponseBody());
+            result = gson.fromJson(object.get("result"), Result.class);
+            System.out.println(result);
         }catch (Exception ex){
             System.out.println(ex.getMessage());
+        }finally {
+            return result;
         }
     }
 

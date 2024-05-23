@@ -1,8 +1,10 @@
 package com.lamarrulla.empresa.controller;
 
+import com.lamarrulla.empresa.entity.Alli.Result;
 import com.lamarrulla.empresa.service.IAlliService;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -17,9 +19,8 @@ public class AlliController {
         this.iAlliService = iAlliService;
     }
 
-    @GetMapping()
-    public ResponseEntity<String> getPrueba() {
-        iAlliService.getProductsById(1);
-        return ResponseEntity.ok("hola mundo");
+    @GetMapping("/{id}")
+    public ResponseEntity<Result> getProductById(@PathVariable String id) {
+        return ResponseEntity.ok(iAlliService.getProductsById(id));
     }
 }

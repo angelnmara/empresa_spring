@@ -1,7 +1,9 @@
 package com.lamarrulla.empresa.service;
 
+import com.lamarrulla.empresa.entity.Alli.Result;
+
 import java.io.IOException;
 
 public interface IAlliService {
-    String getProductsById(Integer id);
+    Result getProductsById(String id);
 }
