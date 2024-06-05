@@ -6,4 +6,5 @@ import java.io.IOException;
 
 public interface IAlliService {
     Result getProductsById(String id);
+    void getCategoryById(String id);
 }

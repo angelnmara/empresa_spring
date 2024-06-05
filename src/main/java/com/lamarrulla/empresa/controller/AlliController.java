@@ -19,8 +19,14 @@ public class AlliController {
         this.iAlliService = iAlliService;
     }
 
-    @GetMapping("/{id}")
+    @GetMapping("/product/{id}")
     public ResponseEntity<Result> getProductById(@PathVariable String id) {
         return ResponseEntity.ok(iAlliService.getProductsById(id));
+    }
+
+    @GetMapping("/categoria/{id}")
+    public ResponseEntity<String> getCategoryById(@PathVariable String id){
+        iAlliService.getCategoryById(id);
+        return ResponseEntity.ok("categoriaok");
     }
 }

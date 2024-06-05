@@ -36,6 +36,26 @@ public class AlliServiceImpl implements IAlliService {
         return obtenerProducto(id);
     }
 
+    @Override
+    public void getCategoryById(String id) {
+        inicializa();
+        obtenerCategoriaPorId(id);
+    }
+
+    private void obtenerCategoriaPorId(String id) {
+        try{
+            IopRequest request = new IopRequest();
+            request.setApiName("aliexpress.ds.category.get");
+            request.addApiParameter("categoryId", "15");
+            request.addApiParameter("language", "es");
+            request.addApiParameter("app_signature", "your signature");
+            IopResponse response = iopClient.execute(request, Protocol.GOP);
+            System.out.println(response);
+        }catch (Exception ex){
+            System.out.println(ex.getMessage());
+        }
+    }
+
     public Result obtenerProducto(String id){
         Result result = new Result();
         try{
