@@ -11,6 +11,7 @@ import com.google.gson.Gson;
 import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
 import com.lamarrulla.empresa.dto.TokenDataDto;
+import com.lamarrulla.empresa.entity.Alli.RespResult;
 import com.lamarrulla.empresa.entity.Alli.Result;
 import com.lamarrulla.empresa.service.IAlliService;
 import com.lamarrulla.empresa.service.ITokenDataService;
@@ -37,22 +38,94 @@ public class AlliServiceImpl implements IAlliService {
     }
 
     @Override
-    public void getCategoryById(String id) {
+    public RespResult getCategoryById(String id) {
         inicializa();
-        obtenerCategoriaPorId(id);
+        return obtenerCategoriaPorId(id);
     }
 
-    private void obtenerCategoriaPorId(String id) {
+    @Override
+    public void itemByFeedName(String feed) {
+        inicializa();
+        itemByFeedNameRepo(feed);
+    }
+
+    @Override
+    public void categoryTree() {
+        inicializa();
+        getCategoryTree();
+    }
+
+    @Override
+    public void placeOrder() {
+        inicializa();
+        getPlaceOrder();
+    }
+
+    private void getPlaceOrder() {
+        try{
+            IopRequest request = new IopRequest();
+            request.setApiName("aliexpress.trade.buy.placeorder");
+            request.addApiParameter("param_place_order_request4_open_api_d_t_o", "{\"product_items\":[{\"logistics_service_name\":\"EPAM\",\"sku_attr\":\"14:70221\",\"product_count\":\"2\",\"product_id\":\"1223211\",\"order_memo\":\"Please put it in a gift box.\"},{\"logistics_service_name\":\"EPAM\",\"sku_attr\":\"14:70221\",\"product_count\":\"2\",\"product_id\":\"1223211\",\"order_memo\":\"Please put it in a gift box.\"}],\"logistics_address\":{\"zip\":\"12222\",\"rut_no\":\"123-K\",\"country\":\"RU\",\"address\":\"sh Kashirskoe dom 142 (QIWI)\",\"passport_no_date\":\"02-23-2018\",\"address2\":\"sh Kashirskoe dom 142 (QIWI)\",\"city\":\"Mosco\",\"contact_person\":\"RU  TEST TEST\",\"mobile_no\":\"12334445\",\"passport_no\":\"12345\",\"locale\":\"en_US\",\"foreigner_passport_no\":\"123456789\",\"location_tree_address_id\":\"903200190000000000-903200190137000000\",\"full_name\":\"RU  TEST TEST\",\"province\":\"Mosco\",\"is_foreigner\":\"true\",\"tax_number\":\"xxx\",\"tax_company\":\"Soceite General\",\"cpf\":\"111\",\"passport_organization\":\"xxxx\",\"phone_country\":\"+7\",\"vat_no\":\"123456778\"},\"out_order_id\":\"123456789\"}");
+            IopResponse response = iopClient.execute(request, token, Protocol.TOP);
+            System.out.println(response);
+            Thread.sleep(10);
+        }catch (Exception ex){
+            System.out.println(ex.getMessage());
+        }
+    }
+
+    private void getCategoryTree() {
+        try{
+            IopRequest request = new IopRequest();
+            request.setApiName("aliexpress.solution.seller.category.tree.query");
+            request.addApiParameter("category_id", "509");
+            request.addApiParameter("filter_no_permission", "true");
+            IopResponse response = iopClient.execute(request, token, Protocol.TOP);
+            System.out.println(response);
+            Thread.sleep(10);
+        }catch (Exception ex){
+            System.out.println(ex.getMessage());
+        }
+    }
+
+    private void itemByFeedNameRepo(String feed){
+        try{
+            IopRequest request = new IopRequest();
+            request.setApiName("aliexpress.ds.recommend.feed.get");
+            request.addApiParameter("country", "MX");
+            request.addApiParameter("target_currency", "MXN");
+            request.addApiParameter("target_language", "es");
+            request.addApiParameter("page_size", "50");
+            request.addApiParameter("sort", "priceAsc");
+            request.addApiParameter("page_no", "1");
+            request.addApiParameter("category_id", null);
+            request.addApiParameter("feed_name", "DS " + feed);
+            IopResponse response = iopClient.execute(request, Protocol.TOP);
+            System.out.println(response);
+            Thread.sleep(10);
+        }catch (Exception ex){
+            System.out.println(ex.getMessage());
+        }
+    }
+
+    private RespResult obtenerCategoriaPorId(String id) {
+        RespResult gopResponseBody = new RespResult();
         try{
             IopRequest request = new IopRequest();
             request.setApiName("aliexpress.ds.category.get");
-            request.addApiParameter("categoryId", "15");
+            request.addApiParameter("categoryId", id);
             request.addApiParameter("language", "es");
             request.addApiParameter("app_signature", "your signature");
             IopResponse response = iopClient.execute(request, Protocol.GOP);
-            System.out.println(response);
+            Gson gson = new Gson();
+            JsonParser parser = new JsonParser();
+            JsonObject object = (JsonObject) parser.parse(response.getGopResponseBody());
+            gopResponseBody = gson.fromJson(object.get("resp_result"), RespResult.class);
+            System.out.println(gopResponseBody);
         }catch (Exception ex){
             System.out.println(ex.getMessage());
+        }finally {
+            return gopResponseBody;
         }
     }
 

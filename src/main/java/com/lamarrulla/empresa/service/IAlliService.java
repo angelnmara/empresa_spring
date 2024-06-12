@@ -1,10 +1,14 @@
 package com.lamarrulla.empresa.service;
 
+import com.lamarrulla.empresa.entity.Alli.RespResult;
 import com.lamarrulla.empresa.entity.Alli.Result;
-
-import java.io.IOException;
 
 public interface IAlliService {
     Result getProductsById(String id);
-    void getCategoryById(String id);
+    RespResult getCategoryById(String id);
+
+    void itemByFeedName(String feeed);
+
+    void categoryTree();
+    void placeOrder();
 }
