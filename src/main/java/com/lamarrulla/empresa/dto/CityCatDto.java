@@ -1,6 +1,5 @@
 package com.lamarrulla.empresa.dto;
 
-import com.lamarrulla.empresa.entity.StateCat;
 import lombok.Data;
 
 @Data

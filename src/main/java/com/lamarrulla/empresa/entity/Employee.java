@@ -1,6 +1,5 @@
 package com.lamarrulla.empresa.entity;
 
-import com.lamarrulla.empresa.vo.EmployeeVO;
 import jakarta.persistence.*;
 import lombok.Data;
 
@@ -17,5 +16,5 @@ public class Employee {
     private PersonalData personalData;
     @OneToMany(fetch = FetchType.LAZY)
     @JoinColumn(name = "role_cat_id", referencedColumnName = "id")
-    private List<RoleCat> roleCat;
+    private List<Role> role;
 }

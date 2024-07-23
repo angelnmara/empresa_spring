@@ -5,13 +5,13 @@ import lombok.Data;
 
 @Data
 @Entity
-public class StateCat {
+public class State {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    private String stateName;
-    private String stateCode;
+    private String name;
+    private String code;
     @ManyToOne
     @JoinColumn(name = "country_cat_id", nullable = false)
-    private CountryCat countryCat;
+    private Country country;
 }

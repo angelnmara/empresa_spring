@@ -1,7 +1,7 @@
 package com.lamarrulla.empresa.mapper.implement;
 
 import com.lamarrulla.empresa.dto.RoleCatDto;
-import com.lamarrulla.empresa.entity.RoleCat;
+import com.lamarrulla.empresa.entity.Role;
 import com.lamarrulla.empresa.mapper.IRoleCatMapper;
 import org.springframework.stereotype.Component;
 
@@ -11,23 +11,23 @@ import java.util.stream.Collectors;
 @Component
 public class RoleCatMapperImpl implements IRoleCatMapper {
     @Override
-    public RoleCatDto toDTO(RoleCat roleCat) {
+    public RoleCatDto toDTO(Role role) {
         RoleCatDto roleCatDto = new RoleCatDto();
-        roleCatDto.setId(roleCat.getId());
-        roleCatDto.setName(roleCat.getRoleName());
+        roleCatDto.setId(role.getId());
+        roleCatDto.setName(role.getName());
         return roleCatDto;
     }
 
     @Override
-    public RoleCat toEntity(RoleCatDto roleCatDto) {
-        RoleCat roleCat = new RoleCat();
-        roleCat.setId(roleCatDto.getId());
-        roleCat.setRoleName(roleCatDto.getName());
-        return roleCat;
+    public Role toEntity(RoleCatDto roleCatDto) {
+        Role role = new Role();
+        role.setId(roleCatDto.getId());
+        role.setName(roleCatDto.getName());
+        return role;
     }
 
     @Override
-    public List<RoleCatDto> toDTOList(List<RoleCat> roleCats) {
-        return roleCats.stream().map(this::toDTO).collect(Collectors.toList());
+    public List<RoleCatDto> toDTOList(List<Role> roles) {
+        return roles.stream().map(this::toDTO).collect(Collectors.toList());
     }
 }

@@ -5,12 +5,12 @@ import lombok.Data;
 
 @Data
 @Entity
-public class CityCat {
+public class City {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    private String cityName;
+    private String name;
     @ManyToOne
     @JoinColumn(name = "state_cat_id", nullable = false)
-    private StateCat stateCat;
+    private State state;
 }

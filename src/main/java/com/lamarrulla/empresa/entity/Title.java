@@ -4,12 +4,9 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 
-public class Customer {
+public class Title {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    private PersonalData personalData;
-    private Address address;
-    private Title title;
-    private Integer grade;
+    private String name;
 }

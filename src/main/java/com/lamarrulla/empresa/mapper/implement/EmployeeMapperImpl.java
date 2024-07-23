@@ -21,7 +21,7 @@ public class EmployeeMapperImpl implements IEmployeeMapper {
         EmployeeDto employeeDto = new EmployeeDto();
         employeeDto.setId(employee.getId());
         employeeDto.setPersonalDataDto(personalDataMapper.toDTO(employee.getPersonalData()));
-        employeeDto.setRoleCat(employee.getRoleCat());
+        employeeDto.setRole(employee.getRole());
         return employeeDto;
     }
 
@@ -30,7 +30,7 @@ public class EmployeeMapperImpl implements IEmployeeMapper {
         Employee employee = new Employee();
         employee.setId(employeeDto.getId());
         employee.setPersonalData(personalDataMapper.toEntity(employeeDto.getPersonalDataDto()));
-        employee.setRoleCat(employeeDto.getRoleCat());
+        employee.setRole(employeeDto.getRole());
         return employee;
     }
 

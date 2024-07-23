@@ -8,14 +8,10 @@ import lombok.Data;
 
 @Data
 @Entity
-public class Address {
+public class Country {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    private String street;
-    private String internalNumber;
-    private String externalNumber;
-    private City city;
-    private State state;
-    private Country country;
+    private String name;
+    private String code;
 }

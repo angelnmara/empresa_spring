@@ -1,7 +1,7 @@
 package com.lamarrulla.empresa.mapper.implement;
 
 import com.lamarrulla.empresa.dto.StateCatDto;
-import com.lamarrulla.empresa.entity.StateCat;
+import com.lamarrulla.empresa.entity.State;
 import com.lamarrulla.empresa.mapper.ICountryCatMapper;
 import com.lamarrulla.empresa.mapper.IStateCatMapper;
 import org.springframework.stereotype.Component;
@@ -17,27 +17,27 @@ public class StateCatMapperImpl implements IStateCatMapper {
     }
 
     @Override
-    public StateCat toEntity(StateCatDto stateCatDto) {
-        StateCat stateCat = new StateCat();
-        stateCat.setStateCode(stateCatDto.getStateCode());
-        stateCat.setStateName(stateCatDto.getStateName());
-        stateCat.setCountryCat(iCountryCatMapper.toEntity(stateCatDto.getCountryCatDto()));
-        stateCat.setId(stateCatDto.getId());
-        return stateCat;
+    public State toEntity(StateCatDto stateCatDto) {
+        State state = new State();
+        state.setCode(stateCatDto.getStateCode());
+        state.setName(stateCatDto.getStateName());
+        state.setCountry(iCountryCatMapper.toEntity(stateCatDto.getCountryCatDto()));
+        state.setId(stateCatDto.getId());
+        return state;
     }
 
     @Override
-    public StateCatDto toDto(StateCat stateCat) {
+    public StateCatDto toDto(State state) {
         StateCatDto stateCatDto = new StateCatDto();
-        stateCatDto.setStateName(stateCat.getStateName());
-        stateCatDto.setStateCode(stateCat.getStateCode());
-        stateCatDto.setCountryCatDto(iCountryCatMapper.toDto(stateCat.getCountryCat()));
-        stateCatDto.setId(stateCat.getId());
+        stateCatDto.setStateName(state.getName());
+        stateCatDto.setStateCode(state.getCode());
+        stateCatDto.setCountryCatDto(iCountryCatMapper.toDto(state.getCountry()));
+        stateCatDto.setId(state.getId());
         return stateCatDto;
     }
 
     @Override
-    public List<StateCatDto> toDtoList(List<StateCat> states) {
+    public List<StateCatDto> toDtoList(List<State> states) {
         return states.stream().map(this::toDto).collect(Collectors.toList());
     }
 }

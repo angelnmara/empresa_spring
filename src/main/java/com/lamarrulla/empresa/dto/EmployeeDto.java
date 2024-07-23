@@ -1,7 +1,6 @@
 package com.lamarrulla.empresa.dto;
 
-import com.lamarrulla.empresa.entity.RoleCat;
-import com.lamarrulla.empresa.vo.EmployeeVO;
+import com.lamarrulla.empresa.entity.Role;
 import lombok.Data;
 
 import java.util.List;
@@ -10,5 +9,5 @@ import java.util.List;
 public class EmployeeDto {
     private Long id;
     private PersonalDataDto personalDataDto;
-    private List<RoleCat> roleCat;
+    private List<Role> role;
 }

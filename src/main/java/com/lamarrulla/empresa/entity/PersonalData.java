@@ -13,6 +13,11 @@ public class PersonalData {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String firstName;
+    private String middleName;
     private String lastName;
+    private Gender gender;
     private Integer age;
+    private Integer phone;
+    private Integer cellphone;
+    private String email;
 }
