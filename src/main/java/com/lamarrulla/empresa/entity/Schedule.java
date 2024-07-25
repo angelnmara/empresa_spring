@@ -13,4 +13,5 @@ public class Schedule {
     private Customer customer;
     private Date date;
     private String description;
+    private Employee employeeAssign;
 }
