@@ -11,6 +11,9 @@ public class MyWork {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String description;
-    private Double amount;
-    private List<Double> pay;
+    private List<Estimate> estimateList;
+    private Double totalAmount;
+    private List<Double> payList;
+    private TypePay typePay;
+    private StatusWork statusWork;
 }

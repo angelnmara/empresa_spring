@@ -4,16 +4,10 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 
-import java.util.List;
-
-public class Estimate {
+public class ReplacementPart {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String name;
-    private Vehicle vehicle;
-    private Services services;
-    private Integer labourCost;
-    private List<ReplacementPart> replacementPartList;
-    private Integer totalCost;
+    private Double cost;
 }

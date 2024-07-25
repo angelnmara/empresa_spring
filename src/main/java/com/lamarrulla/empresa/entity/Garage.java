@@ -18,4 +18,6 @@ public class Garage {
     private List<DocumentsCat> documentsCatList;
     private List<Services> servicesList;
     private List<Budget> budgetList;
+    private Integer totalCustomers;
+    private Integer newCustomers;
 }
