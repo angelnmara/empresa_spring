@@ -6,14 +6,11 @@ import jakarta.persistence.Id;
 
 import java.util.List;
 
-public class Customer {
+public class MyWork {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    private PersonalData personalData;
-    private List<Address> addressList;
-    private Title title;
-    private Integer grade;
-    private List<Vehicle> vehicleList;
-    private List<DocumentsCat> documentsCatList;
+    private String description;
+    private Double amount;
+    private List<Double> pay;
 }
