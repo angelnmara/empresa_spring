@@ -9,4 +9,12 @@ public class Brand {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String name;
+
+    public static class Mannager {
+        @Id
+        @GeneratedValue(strategy = GenerationType.IDENTITY)
+        private Long id;
+        private PersonalData mannager;
+        private ContactData contactData;
+    }
 }

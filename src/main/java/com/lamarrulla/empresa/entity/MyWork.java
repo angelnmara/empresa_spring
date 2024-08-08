@@ -16,4 +16,5 @@ public class MyWork {
     private List<Double> payList;
     private TypePay typePay;
     private StatusWork statusWork;
+    /// tiempo para cancelar en automatico // enviar alert para notificar que se encuentran iniciadas y se le tiene que dar seguimiento
 }

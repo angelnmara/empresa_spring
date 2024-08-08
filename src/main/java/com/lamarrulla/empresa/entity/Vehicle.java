@@ -13,4 +13,7 @@ public class Vehicle {
     private Integer year;
     private String plate;
     private Color color;
+    /// falta url de la imagen
+    /// falta el kilometraje
+    /// no chasis
 }

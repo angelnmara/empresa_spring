@@ -15,5 +15,6 @@ public class Customer {
     private Title title;
     private Integer grade;
     private List<Vehicle> vehicleList;
+    // Cliente // Documentos //
     private List<DocumentsCat> documentsCatList;
 }

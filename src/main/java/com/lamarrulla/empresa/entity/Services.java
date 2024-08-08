@@ -10,4 +10,6 @@ public class Services {
     private Long id;
     private String name;
     private Boolean specialty;
+    /// agregar fecha de pago
+    /// costo de mano de obra
 }

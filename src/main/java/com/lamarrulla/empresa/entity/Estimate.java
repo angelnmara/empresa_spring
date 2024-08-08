@@ -14,6 +14,7 @@ public class Estimate {
     private Vehicle vehicle;
     private Services services;
     private Integer labourCost;
+    /// revisar
     private List<ReplacementPart> replacementPartList;
     private Integer totalCost;
 }
