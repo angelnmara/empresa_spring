@@ -7,8 +7,8 @@ import java.util.List;
 public class CustomerDto {
     private PersonalData personalData;
     private List<Address> addressList;
-    private Title title;
+    private TitleCat title;
     private Integer grade;
-    private List<Vehicle> vehicleList;
+    private List<VehicleCat> vehicleCatList;
     private List<DocumentsCat> documentsCatList;
 }

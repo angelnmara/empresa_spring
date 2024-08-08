@@ -11,10 +11,10 @@ public class Estimate {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String name;
-    private Vehicle vehicle;
-    private Services services;
+    private VehicleCat vehicleCat;
+    private ServicesCat services;
     private Integer labourCost;
     /// revisar
-    private List<ReplacementPart> replacementPartList;
+    private List<ReplacementPartCat> replacementPartCatList;
     private Integer totalCost;
 }

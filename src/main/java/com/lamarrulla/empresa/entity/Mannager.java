@@ -4,16 +4,10 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 
-public class Vehicle {
+public class Mannager {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    private Brand brand;
-    private Model model;
-    private Integer year;
-    private String plate;
-    private Color color;
-    /// falta url de la imagen
-    /// falta el kilometraje
-    /// no chasis
+    private PersonalData mannager;
+    private ContactData contactData;
 }

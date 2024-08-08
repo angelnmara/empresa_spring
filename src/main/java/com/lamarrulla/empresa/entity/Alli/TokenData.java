@@ -1,4 +1,4 @@
-package com.lamarrulla.empresa.entity;
+package com.lamarrulla.empresa.entity.Alli;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;

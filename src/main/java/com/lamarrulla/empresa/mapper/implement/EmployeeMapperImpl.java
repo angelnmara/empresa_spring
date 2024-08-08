@@ -1,7 +1,7 @@
 package com.lamarrulla.empresa.mapper.implement;
 
 import com.lamarrulla.empresa.dto.EmployeeDto;
-import com.lamarrulla.empresa.entity.Employee;
+import com.lamarrulla.empresa.entity.EmployeeCat;
 import com.lamarrulla.empresa.mapper.IEmployeeMapper;
 import org.springframework.stereotype.Component;
 
@@ -17,25 +17,25 @@ public class EmployeeMapperImpl implements IEmployeeMapper {
     }
 
     @Override
-    public EmployeeDto toDTO(Employee employee) {
+    public EmployeeDto toDTO(EmployeeCat employeeCat) {
         EmployeeDto employeeDto = new EmployeeDto();
-        employeeDto.setId(employee.getId());
-        employeeDto.setPersonalDataDto(personalDataMapper.toDTO(employee.getPersonalData()));
-        employeeDto.setRole(employee.getRole());
+        employeeDto.setId(employeeCat.getId());
+        employeeDto.setPersonalDataDto(personalDataMapper.toDTO(employeeCat.getPersonalData()));
+        employeeDto.setRoleCat(employeeCat.getRoleCat());
         return employeeDto;
     }
 
     @Override
-    public Employee toEntity(EmployeeDto employeeDto) {
-        Employee employee = new Employee();
-        employee.setId(employeeDto.getId());
-        employee.setPersonalData(personalDataMapper.toEntity(employeeDto.getPersonalDataDto()));
-        employee.setRole(employeeDto.getRole());
-        return employee;
+    public EmployeeCat toEntity(EmployeeDto employeeDto) {
+        EmployeeCat employeeCat = new EmployeeCat();
+        employeeCat.setId(employeeDto.getId());
+        employeeCat.setPersonalData(personalDataMapper.toEntity(employeeDto.getPersonalDataDto()));
+        employeeCat.setRoleCat(employeeDto.getRoleCat());
+        return employeeCat;
     }
 
     @Override
-    public List<EmployeeDto> toDTOList(List<Employee> employeeList) {
-        return employeeList.stream().map(x->toDTO(x)).collect(Collectors.toList());
+    public List<EmployeeDto> toDTOList(List<EmployeeCat> employeeCatList) {
+        return employeeCatList.stream().map(x->toDTO(x)).collect(Collectors.toList());
     }
 }

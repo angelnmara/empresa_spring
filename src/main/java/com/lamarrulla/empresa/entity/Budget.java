@@ -8,6 +8,6 @@ public class Budget {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    private Expense expense;
+    private ExpenseCat expenseCat;
     private Double cost;
 }

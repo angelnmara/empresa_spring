@@ -1,7 +1,7 @@
 package com.lamarrulla.empresa.mapper.implement;
 
 import com.lamarrulla.empresa.dto.CountryCatDto;
-import com.lamarrulla.empresa.entity.Country;
+import com.lamarrulla.empresa.entity.CountryCat;
 import com.lamarrulla.empresa.mapper.ICountryCatMapper;
 import org.springframework.stereotype.Component;
 import java.util.List;
@@ -9,25 +9,25 @@ import java.util.stream.Collectors;
 @Component
 public class CountryCatMapperImpl implements ICountryCatMapper {
     @Override
-    public Country toEntity(CountryCatDto countryCatDto) {
-        Country country = new Country();
-        country.setCode(countryCatDto.getCountryCode());
-        country.setName(countryCatDto.getCountryName());
-        country.setId(countryCatDto.getId());
-        return country;
+    public CountryCat toEntity(CountryCatDto countryCatDto) {
+        CountryCat countryCat = new CountryCat();
+        countryCat.setCode(countryCatDto.getCountryCode());
+        countryCat.setName(countryCatDto.getCountryName());
+        countryCat.setId(countryCatDto.getId());
+        return countryCat;
     }
 
     @Override
-    public CountryCatDto toDto(Country country) {
+    public CountryCatDto toDto(CountryCat countryCat) {
         CountryCatDto countryCatDto = new CountryCatDto();
-        countryCatDto.setCountryCode(country.getCode());
-        countryCatDto.setCountryName(country.getName());
-        countryCatDto.setId(country.getId());
+        countryCatDto.setCountryCode(countryCat.getCode());
+        countryCatDto.setCountryName(countryCat.getName());
+        countryCatDto.setId(countryCat.getId());
         return countryCatDto;
     }
 
     @Override
-    public List<CountryCatDto> toDtoList(List<Country> countries) {
+    public List<CountryCatDto> toDtoList(List<CountryCat> countries) {
         return countries.stream().map(this::toDto).collect(Collectors.toList());
     }
 }

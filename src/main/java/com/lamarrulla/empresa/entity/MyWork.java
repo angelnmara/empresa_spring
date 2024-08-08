@@ -14,7 +14,7 @@ public class MyWork {
     private List<Estimate> estimateList;
     private Double totalAmount;
     private List<Double> payList;
-    private TypePay typePay;
-    private StatusWork statusWork;
+    private TypePayCat typePay;
+    private StatusWorkCat statusWorkCat;
     /// tiempo para cancelar en automatico // enviar alert para notificar que se encuentran iniciadas y se le tiene que dar seguimiento
 }

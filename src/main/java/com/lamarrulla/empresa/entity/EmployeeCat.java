@@ -7,7 +7,7 @@ import java.util.List;
 
 @Data
 @Entity
-public class Employee {
+public class EmployeeCat {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -16,8 +16,8 @@ public class Employee {
     private PersonalData personalData;
     @OneToMany(fetch = FetchType.LAZY)
     @JoinColumn(name = "role_cat_id", referencedColumnName = "id")
-    private List<Role> role;
+    private List<RoleCat> roleCat;
     private ContactData contactData;
-    private Company company;
+    private CompanyCat companyCat;
     private List<DocumentsCat> documentsCatList;
 }

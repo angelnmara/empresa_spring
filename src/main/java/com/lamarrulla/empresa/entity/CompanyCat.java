@@ -1,17 +1,16 @@
 package com.lamarrulla.empresa.entity;
 
-import jakarta.persistence.*;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
 import lombok.Data;
 
 @Data
 @Entity
-public class State {
+public class CompanyCat {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String name;
-    private String code;
-    @ManyToOne
-    @JoinColumn(name = "country_cat_id", nullable = false)
-    private Country country;
 }

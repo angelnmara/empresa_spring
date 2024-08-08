@@ -4,11 +4,9 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 
-public class ReplacementPart {
+public class GenderCat {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    private String name;
-    /// agregar costo de venta / costo de compra
-    private Double cost;
+    private String description;
 }

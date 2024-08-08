@@ -1,7 +1,7 @@
 package com.lamarrulla.empresa.mapper.implement;
 
 import com.lamarrulla.empresa.dto.StateCatDto;
-import com.lamarrulla.empresa.entity.State;
+import com.lamarrulla.empresa.entity.StateCat;
 import com.lamarrulla.empresa.mapper.ICountryCatMapper;
 import com.lamarrulla.empresa.mapper.IStateCatMapper;
 import org.springframework.stereotype.Component;
@@ -17,27 +17,27 @@ public class StateCatMapperImpl implements IStateCatMapper {
     }
 
     @Override
-    public State toEntity(StateCatDto stateCatDto) {
-        State state = new State();
+    public StateCat toEntity(StateCatDto stateCatDto) {
+        StateCat state = new StateCat();
         state.setCode(stateCatDto.getStateCode());
         state.setName(stateCatDto.getStateName());
-        state.setCountry(iCountryCatMapper.toEntity(stateCatDto.getCountryCatDto()));
+        state.setCountryCat(iCountryCatMapper.toEntity(stateCatDto.getCountryCatDto()));
         state.setId(stateCatDto.getId());
         return state;
     }
 
     @Override
-    public StateCatDto toDto(State state) {
+    public StateCatDto toDto(StateCat state) {
         StateCatDto stateCatDto = new StateCatDto();
         stateCatDto.setStateName(state.getName());
         stateCatDto.setStateCode(state.getCode());
-        stateCatDto.setCountryCatDto(iCountryCatMapper.toDto(state.getCountry()));
+        stateCatDto.setCountryCatDto(iCountryCatMapper.toDto(state.getCountryCat()));
         stateCatDto.setId(state.getId());
         return stateCatDto;
     }
 
     @Override
-    public List<StateCatDto> toDtoList(List<State> states) {
+    public List<StateCatDto> toDtoList(List<StateCat> states) {
         return states.stream().map(this::toDto).collect(Collectors.toList());
     }
 }

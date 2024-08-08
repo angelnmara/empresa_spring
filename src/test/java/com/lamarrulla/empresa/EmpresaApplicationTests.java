@@ -1,9 +1,9 @@
 package com.lamarrulla.empresa;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.lamarrulla.empresa.entity.Employee;
+import com.lamarrulla.empresa.entity.EmployeeCat;
 import com.lamarrulla.empresa.entity.PersonalData;
-import com.lamarrulla.empresa.entity.Role;
+import com.lamarrulla.empresa.entity.RoleCat;
 import com.lamarrulla.empresa.repository.IRoleCatRepository;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
@@ -36,33 +36,33 @@ class EmpresaApplicationTests {
 
 	@Test
 	void assertRol() throws Exception {
-		Role role = new Role();
-		role.setId(1L);
-		role.setName("Dave");
+		RoleCat roleCat = new RoleCat();
+		roleCat.setId(1L);
+		roleCat.setName("Dave");
 		mockMvc.perform(post("/private/role-cat")
 						.contentType("application/json")
 						.param("id", "1")
-						.content(objectMapper.writeValueAsString(role)))
+						.content(objectMapper.writeValueAsString(roleCat)))
 				.andExpect(status().isOk());
-		Role roleEntity = iRoleCatRepository.findById(1).get();
-		Assert.hasText(roleEntity.getName(), "Dave");
+		RoleCat roleCatEntity = iRoleCatRepository.findById(1).get();
+		Assert.hasText(roleCatEntity.getName(), "Dave");
 	}
 	@Test
 	void assertEmploye() throws Exception{
-		Employee employee = new Employee();
-		employee.setId(1L);
-		List<Role> roles = new ArrayList<>();
-		Role role = new Role();
-		role.setId(1L);
-		roles.add(role);
+		EmployeeCat employeeCat = new EmployeeCat();
+		employeeCat.setId(1L);
+		List<RoleCat> roleCats = new ArrayList<>();
+		RoleCat roleCat = new RoleCat();
+		roleCat.setId(1L);
+		roleCats.add(roleCat);
 		PersonalData personalData = new PersonalData();
 		personalData.setId(1L);
-		employee.setPersonalData(personalData);
-		employee.setRole(roles);
+		employeeCat.setPersonalData(personalData);
+		employeeCat.setRoleCat(roleCats);
 		mockMvc.perform(post("/private/employee")
 						.contentType("application/json")
 						.param("id", "1")
-						.content(objectMapper.writeValueAsString(employee)))
+						.content(objectMapper.writeValueAsString(employeeCat)))
 				.andExpect(status().isOk());
 	}
 

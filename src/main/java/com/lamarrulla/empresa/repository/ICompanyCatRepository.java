@@ -1,7 +1,7 @@
 package com.lamarrulla.empresa.repository;
 
-import com.lamarrulla.empresa.entity.Company;
+import com.lamarrulla.empresa.entity.CompanyCat;
 import org.springframework.data.jpa.repository.JpaRepository;
 
-public interface ICompanyCatRepository extends JpaRepository<Company, Integer> {
+public interface ICompanyCatRepository extends JpaRepository<CompanyCat, Integer> {
 }

@@ -4,12 +4,9 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 
-public class Services {
+public class StatusWorkCat {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String name;
-    private Boolean specialty;
-    /// agregar fecha de pago
-    /// costo de mano de obra
 }

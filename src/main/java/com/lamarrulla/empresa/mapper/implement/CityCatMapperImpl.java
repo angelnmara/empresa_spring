@@ -1,7 +1,7 @@
 package com.lamarrulla.empresa.mapper.implement;
 
 import com.lamarrulla.empresa.dto.CityCatDto;
-import com.lamarrulla.empresa.entity.City;
+import com.lamarrulla.empresa.entity.CityCat;
 import com.lamarrulla.empresa.mapper.ICityCatMapper;
 import com.lamarrulla.empresa.mapper.IStateCatMapper;
 import org.springframework.stereotype.Component;
@@ -17,25 +17,25 @@ public class CityCatMapperImpl implements ICityCatMapper {
     }
 
     @Override
-    public City toEntity(CityCatDto cityCatDto) {
-        City city = new City();
-        city.setState(iStateCatMapper.toEntity(cityCatDto.getStateCatDto()));
-        city.setName(cityCatDto.getCityName());
-        city.setId(cityCatDto.getId());
-        return city;
+    public CityCat toEntity(CityCatDto cityCatDto) {
+        CityCat cityCat = new CityCat();
+        cityCat.setState(iStateCatMapper.toEntity(cityCatDto.getStateCatDto()));
+        cityCat.setName(cityCatDto.getCityName());
+        cityCat.setId(cityCatDto.getId());
+        return cityCat;
     }
 
     @Override
-    public CityCatDto toDto(City city) {
+    public CityCatDto toDto(CityCat cityCat) {
         CityCatDto cityCatDto = new CityCatDto();
-        cityCatDto.setCityName(city.getName());
-        cityCatDto.setStateCatDto(iStateCatMapper.toDto(city.getState()));
-        cityCatDto.setId(city.getId());
+        cityCatDto.setCityName(cityCat.getName());
+        cityCatDto.setStateCatDto(iStateCatMapper.toDto(cityCat.getState()));
+        cityCatDto.setId(cityCat.getId());
         return cityCatDto;
     }
 
     @Override
-    public List<CityCatDto> toDtoList(List<City> cityList) {
-        return cityList.stream().map(this::toDto).collect(Collectors.toList());
+    public List<CityCatDto> toDtoList(List<CityCat> cityCatList) {
+        return cityCatList.stream().map(this::toDto).collect(Collectors.toList());
     }
 }

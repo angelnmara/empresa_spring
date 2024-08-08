@@ -1,12 +1,12 @@
 package com.lamarrulla.empresa.mapper;
 
 import com.lamarrulla.empresa.dto.CountryCatDto;
-import com.lamarrulla.empresa.entity.Country;
+import com.lamarrulla.empresa.entity.CountryCat;
 
 import java.util.List;
 
 public interface ICountryCatMapper {
-    Country toEntity(CountryCatDto countryCatDto);
-    CountryCatDto toDto(Country country);
-    List<CountryCatDto> toDtoList(List<Country> countries);
+    CountryCat toEntity(CountryCatDto countryCatDto);
+    CountryCatDto toDto(CountryCat countryCat);
+    List<CountryCatDto> toDtoList(List<CountryCat> countries);
 }

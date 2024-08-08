@@ -1,7 +1,6 @@
 package com.lamarrulla.empresa.service;
 
 import com.lamarrulla.empresa.dto.EmployeeDto;
-import com.lamarrulla.empresa.entity.Employee;
 
 import java.util.List;
 

@@ -10,8 +10,8 @@ public class Schedule {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    private Customer customer;
+    private CustomerCat customerCat;
     private Date date;
     private String description;
-    private Employee employeeAssign;
+    private EmployeeCat employeeCatAssign;
 }

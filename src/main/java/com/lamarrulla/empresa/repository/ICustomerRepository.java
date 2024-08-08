@@ -1,7 +1,7 @@
 package com.lamarrulla.empresa.repository;
 
-import com.lamarrulla.empresa.entity.Customer;
+import com.lamarrulla.empresa.entity.CustomerCat;
 import org.springframework.data.jpa.repository.JpaRepository;
 
-public interface ICustomerRepository extends JpaRepository<Customer, Integer> {
+public interface ICustomerRepository extends JpaRepository<CustomerCat, Integer> {
 }

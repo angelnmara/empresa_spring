@@ -1,7 +1,7 @@
 package com.lamarrulla.empresa.mapper.implement;
 
 import com.lamarrulla.empresa.dto.CompanyCatDto;
-import com.lamarrulla.empresa.entity.Company;
+import com.lamarrulla.empresa.entity.CompanyCat;
 import com.lamarrulla.empresa.mapper.ICompanyCatMapper;
 import org.springframework.stereotype.Component;
 
@@ -10,23 +10,23 @@ import java.util.stream.Collectors;
 @Component
 public class CompanyCatMapperImpl implements ICompanyCatMapper {
     @Override
-    public CompanyCatDto toDto(Company company) {
+    public CompanyCatDto toDto(CompanyCat companyCat) {
         CompanyCatDto companyCatDto = new CompanyCatDto();
-        companyCatDto.setCompanyName(company.getName());
-        companyCatDto.setId(company.getId());
+        companyCatDto.setCompanyName(companyCat.getName());
+        companyCatDto.setId(companyCat.getId());
         return companyCatDto;
     }
 
     @Override
-    public Company toEntity(CompanyCatDto companyCatDto) {
-        Company company = new Company();
-        company.setName(companyCatDto.getCompanyName());
-        company.setId(companyCatDto.getId());
-        return company;
+    public CompanyCat toEntity(CompanyCatDto companyCatDto) {
+        CompanyCat companyCat = new CompanyCat();
+        companyCat.setName(companyCatDto.getCompanyName());
+        companyCat.setId(companyCatDto.getId());
+        return companyCat;
     }
 
     @Override
-    public List<CompanyCatDto> toDtoList(List<Company> companies) {
+    public List<CompanyCatDto> toDtoList(List<CompanyCat> companies) {
         return companies.stream().map(this::toDto).collect(Collectors.toList());
     }
 }

@@ -6,19 +6,19 @@ import jakarta.persistence.Id;
 
 import java.util.List;
 
-public class Garage {
+public class GarageCat {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String name;
     private List<Address> address;
-    private List<Brand.Mannager> mannager;
+    private List<Mannager> mannager;
     private Integer grade;
     private ContactData contactData;
     /// idcatalogo // taller // documento
     private List<DocumentsCat> documentsCatList;
     /// idServico // taller // precio // material
-    private List<Services> servicesList;
+    private List<ServicesCat> servicesList;
     private List<Budget> budgetList;
     private Integer totalCustomers;
     private Integer newCustomers;

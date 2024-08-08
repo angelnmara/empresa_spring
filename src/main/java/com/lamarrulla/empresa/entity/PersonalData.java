@@ -15,7 +15,7 @@ public class PersonalData {
     private String firstName;
     private String middleName;
     private String lastName;
-    private Gender gender;
+    private GenderCat genderCat;
     private Integer age;
     private ContactData contactData;
 }
