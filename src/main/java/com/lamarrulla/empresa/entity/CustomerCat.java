@@ -11,10 +11,10 @@ public class CustomerCat {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private PersonalData personalData;
-    private List<Address> addressList;
+    private List<AddressCat> addressList;
     private TitleCat title;
     private Integer grade;
-    private List<VehicleCat> vehicleCatList;
+    private List<CustomerVehicle> customerVehicleList;
     // Cliente // Documentos //
     private List<DocumentsCat> documentsCatList;
 }

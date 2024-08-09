@@ -9,6 +9,4 @@ public class ReplacementPartCat {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String name;
-    private Double cost;
-    private Double salesCost;
 }

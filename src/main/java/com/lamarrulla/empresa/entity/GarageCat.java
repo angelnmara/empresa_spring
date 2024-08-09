@@ -11,14 +11,14 @@ public class GarageCat {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String name;
-    private List<Address> address;
+    private List<AddressCat> addressCats;
     private List<Mannager> mannager;
     private Integer grade;
     private ContactData contactData;
     /// idcatalogo // taller // documento
     private List<DocumentsCat> documentsCatList;
     /// idServico // taller // precio // material
-    private List<ServicesCat> servicesList;
+    private List<ServiceCat> servicesList;
     private List<Budget> budgetList;
     private Integer totalCustomers;
     private Integer newCustomers;

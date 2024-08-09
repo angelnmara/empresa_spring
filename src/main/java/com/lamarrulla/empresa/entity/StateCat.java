@@ -13,5 +13,5 @@ public class StateCat {
     private String code;
     @ManyToOne
     @JoinColumn(name = "country_cat_id", nullable = false)
-    private CountryCat countryCat;
+    private CountryCat country;
 }

@@ -8,7 +8,7 @@ import lombok.Data;
 
 @Data
 @Entity
-public class Address {
+public class AddressCat {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -16,6 +16,6 @@ public class Address {
     private String internalNumber;
     private String externalNumber;
     private CityCat cityCat;
-    private StateCat state;
+    private StateCat stateCat;
     private CountryCat countryCat;
 }

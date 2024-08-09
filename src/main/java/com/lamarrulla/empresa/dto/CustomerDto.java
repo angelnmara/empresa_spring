@@ -6,7 +6,7 @@ import java.util.List;
 
 public class CustomerDto {
     private PersonalData personalData;
-    private List<Address> addressList;
+    private List<AddressCat> addressCatList;
     private TitleCat title;
     private Integer grade;
     private List<VehicleCat> vehicleCatList;

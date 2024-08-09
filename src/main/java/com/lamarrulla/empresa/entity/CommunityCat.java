@@ -4,10 +4,11 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 
-public class DocumentsCat {
+public class CommunityCat {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    private String name;
-    /*private Boolean mandatory;*/
+    private String communityName;
+    private Long ZipCode;
+    private CityCat city;
 }

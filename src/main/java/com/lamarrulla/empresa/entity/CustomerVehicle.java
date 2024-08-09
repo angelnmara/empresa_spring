@@ -6,15 +6,15 @@ import jakarta.persistence.Id;
 
 import java.util.List;
 
-public class Estimate {
+public class CustomerVehicle {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    private GarageCat garage;
-    private String name;
+    private CustomerCat customer;
     private VehicleCat vehicle;
-    private GarageService garageService;
-    private Integer labourCost;
-    private List<GarageReplacementPart> replacementPartList;
-    private Integer totalCost;
+    private String plate;
+    private ColorCat colorCat;
+    private Integer kilometerAge;
+    private Integer chassisNumber;
+    private List<String> imageList;
 }

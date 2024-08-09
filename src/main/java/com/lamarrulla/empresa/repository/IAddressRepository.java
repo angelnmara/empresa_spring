@@ -1,7 +1,7 @@
 package com.lamarrulla.empresa.repository;
 
-import com.lamarrulla.empresa.entity.Address;
+import com.lamarrulla.empresa.entity.AddressCat;
 import org.springframework.data.jpa.repository.JpaRepository;
 
-public interface IAddressRepository extends JpaRepository<Address, Integer> {
+public interface IAddressRepository extends JpaRepository<AddressCat, Integer> {
 }

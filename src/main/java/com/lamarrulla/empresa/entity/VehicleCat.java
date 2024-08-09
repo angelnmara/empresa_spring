@@ -11,8 +11,8 @@ public class VehicleCat {
     private BrandCat brandCat;
     private ModelCat modelCat;
     private Integer year;
-    private String plate;
-    private ColorCat colorCat;
+    /*private String plate;
+    private ColorCat colorCat;*/
     /// falta url de la imagen
     /// falta el kilometraje
     /// no chasis
