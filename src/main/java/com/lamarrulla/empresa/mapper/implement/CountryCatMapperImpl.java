@@ -30,4 +30,9 @@ public class CountryCatMapperImpl implements ICountryCatMapper {
     public List<CountryCatDto> toDtoList(List<CountryCat> countries) {
         return countries.stream().map(this::toDto).collect(Collectors.toList());
     }
+
+    @Override
+    public List<CountryCat> toEntityList(List<CountryCatDto> countryCatDtoList) {
+        return countryCatDtoList.stream().map(this::toEntity).collect(Collectors.toList());
+    }
 }

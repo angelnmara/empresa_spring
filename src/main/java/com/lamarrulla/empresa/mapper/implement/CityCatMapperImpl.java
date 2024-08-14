@@ -19,8 +19,8 @@ public class CityCatMapperImpl implements ICityCatMapper {
     @Override
     public CityCat toEntity(CityCatDto cityCatDto) {
         CityCat cityCat = new CityCat();
-        cityCat.setState(iStateCatMapper.toEntity(cityCatDto.getStateCatDto()));
-        cityCat.setName(cityCatDto.getCityName());
+        cityCat.setState(iStateCatMapper.toEntity(cityCatDto.getStateDto()));
+        cityCat.setName(cityCatDto.getName());
         cityCat.setId(cityCatDto.getId());
         return cityCat;
     }
@@ -28,8 +28,8 @@ public class CityCatMapperImpl implements ICityCatMapper {
     @Override
     public CityCatDto toDto(CityCat cityCat) {
         CityCatDto cityCatDto = new CityCatDto();
-        cityCatDto.setCityName(cityCat.getName());
-        cityCatDto.setStateCatDto(iStateCatMapper.toDto(cityCat.getState()));
+        cityCatDto.setName(cityCat.getName());
+        cityCatDto.setStateDto(iStateCatMapper.toDto(cityCat.getState()));
         cityCatDto.setId(cityCat.getId());
         return cityCatDto;
     }

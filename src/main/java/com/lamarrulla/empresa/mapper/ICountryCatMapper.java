@@ -9,4 +9,5 @@ public interface ICountryCatMapper {
     CountryCat toEntity(CountryCatDto countryCatDto);
     CountryCatDto toDto(CountryCat countryCat);
     List<CountryCatDto> toDtoList(List<CountryCat> countries);
+    List<CountryCat> toEntityList(List<CountryCatDto> countryCatDtoList);
 }

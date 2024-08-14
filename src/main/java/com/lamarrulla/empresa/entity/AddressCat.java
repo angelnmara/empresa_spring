@@ -15,7 +15,7 @@ public class AddressCat {
     private String street;
     private String internalNumber;
     private String externalNumber;
-    private CityCat cityCat;
-    private StateCat stateCat;
-    private CountryCat countryCat;
+    private CityCat city;
+    private StateCat state;
+    private CountryCat country;
 }

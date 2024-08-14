@@ -1,9 +1,10 @@
 package com.lamarrulla.empresa.dto;
 
 import com.lamarrulla.empresa.entity.CustomerCat;
+import lombok.Data;
 
 import java.util.List;
-
+@Data
 public class BudgetCatDto {
     private Long id;
     private CustomerCatDto customerDto;
