@@ -1,11 +1,11 @@
 package com.lamarrulla.empresa.service;
 
-import com.lamarrulla.empresa.dto.EmployeeDto;
+import com.lamarrulla.empresa.dto.EmployeeCatDto;
 
 import java.util.List;
 
 public interface IEmployeeService {
-    EmployeeDto findById(Integer id);
-    List<EmployeeDto> findAll();
-    EmployeeDto save(EmployeeDto employeeDto);
+    EmployeeCatDto findById(Integer id);
+    List<EmployeeCatDto> findAll();
+    EmployeeCatDto save(EmployeeCatDto employeeCatDto);
 }

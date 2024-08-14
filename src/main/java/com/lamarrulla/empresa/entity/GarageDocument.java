@@ -4,11 +4,11 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 
-public class VehicleCat {
+public class GarageDocument {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    private BrandCat brandCat;
-    private ModelCat modelCat;
-    private Integer year;
+    private GarageCat garage;
+    private DocumentCat document;
+    private Boolean mandatory;
 }

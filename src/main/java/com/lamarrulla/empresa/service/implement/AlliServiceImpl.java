@@ -10,7 +10,7 @@ import com.global.iop.util.FileItem;
 import com.google.gson.Gson;
 import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
-import com.lamarrulla.empresa.dto.TokenDataDto;
+import com.lamarrulla.empresa.dto.AlliDto.TokenDataDto;
 import com.lamarrulla.empresa.entity.Alli.RespResult;
 import com.lamarrulla.empresa.entity.Alli.Result;
 import com.lamarrulla.empresa.service.IAlliService;

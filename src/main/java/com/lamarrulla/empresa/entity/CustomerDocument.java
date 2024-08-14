@@ -4,10 +4,11 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 
-public class Budget {
+public class CustomerDocument {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    private ExpenseCat expenseCat;
-    private Double cost;
+    private CustomerCat customer;
+    private DocumentCat document;
+    private Boolean mandatory;
 }

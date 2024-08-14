@@ -1,4 +1,4 @@
-package com.lamarrulla.empresa.dto;
+package com.lamarrulla.empresa.dto.AlliDto;
 
 import lombok.Data;
 

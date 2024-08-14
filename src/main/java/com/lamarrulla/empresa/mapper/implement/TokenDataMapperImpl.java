@@ -1,6 +1,6 @@
 package com.lamarrulla.empresa.mapper.implement;
 
-import com.lamarrulla.empresa.dto.TokenDataDto;
+import com.lamarrulla.empresa.dto.AlliDto.TokenDataDto;
 import com.lamarrulla.empresa.entity.Alli.TokenData;
 import com.lamarrulla.empresa.mapper.ITokenDataMapper;
 import org.springframework.stereotype.Component;

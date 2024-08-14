@@ -4,10 +4,9 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 
-public class EmployeeDocuments {
+public class DocumentCat {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    EmployeeCat employee;
-    DocumentsCat document;
+    private String name;
 }

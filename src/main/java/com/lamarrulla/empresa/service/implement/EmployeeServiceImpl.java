@@ -1,6 +1,6 @@
 package com.lamarrulla.empresa.service.implement;
 
-import com.lamarrulla.empresa.dto.EmployeeDto;
+import com.lamarrulla.empresa.dto.EmployeeCatDto;
 import com.lamarrulla.empresa.mapper.IEmployeeMapper;
 import com.lamarrulla.empresa.repository.IEmployeeRepository;
 import com.lamarrulla.empresa.service.IEmployeeService;
@@ -19,17 +19,17 @@ public class EmployeeServiceImpl implements IEmployeeService {
     }
 
     @Override
-    public EmployeeDto findById(Integer id) {
+    public EmployeeCatDto findById(Integer id) {
         return iEmployeeMapper.toDTO(iEmployeeRepository.findById(id).get());
     }
 
     @Override
-    public List<EmployeeDto> findAll() {
+    public List<EmployeeCatDto> findAll() {
         return iEmployeeMapper.toDTOList(iEmployeeRepository.findAll());
     }
 
     @Override
-    public EmployeeDto save(EmployeeDto employeeDto) {
-        return iEmployeeMapper.toDTO(iEmployeeRepository.save(iEmployeeMapper.toEntity(employeeDto)));
+    public EmployeeCatDto save(EmployeeCatDto employeeCatDto) {
+        return iEmployeeMapper.toDTO(iEmployeeRepository.save(iEmployeeMapper.toEntity(employeeCatDto)));
     }
 }

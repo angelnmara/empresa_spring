@@ -7,5 +7,5 @@ public class CommunityCatDto {
     private Long id;
     private String communityName;
     private Long ZipCode;
-    private CityCatDto cityCatDto;
+    private CityCatDto cityDto;
 }

@@ -1,6 +1,6 @@
 package com.lamarrulla.empresa.service.implement;
 
-import com.lamarrulla.empresa.dto.TokenDataDto;
+import com.lamarrulla.empresa.dto.AlliDto.TokenDataDto;
 import com.lamarrulla.empresa.mapper.ITokenDataMapper;
 import com.lamarrulla.empresa.repository.ITokenDataRepository;
 import com.lamarrulla.empresa.service.ITokenDataService;

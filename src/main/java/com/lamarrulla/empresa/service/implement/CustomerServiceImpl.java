@@ -1,6 +1,6 @@
 package com.lamarrulla.empresa.service.implement;
 
-import com.lamarrulla.empresa.dto.CustomerDto;
+import com.lamarrulla.empresa.dto.CustomerCatDto;
 import com.lamarrulla.empresa.repository.ICustomerRepository;
 import com.lamarrulla.empresa.service.ICustomerService;
 
@@ -12,7 +12,7 @@ public class CustomerServiceImpl implements ICustomerService {
     }
 
     @Override
-    public CustomerDto save(CustomerDto customerDto) {
+    public CustomerCatDto save(CustomerCatDto customerCatDto) {
         return null;
     }
 }

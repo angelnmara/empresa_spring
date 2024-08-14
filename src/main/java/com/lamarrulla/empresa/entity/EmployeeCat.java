@@ -19,5 +19,5 @@ public class EmployeeCat {
     private List<RoleCat> roleCat;
     private ContactData contactData;
     private CompanyCat companyCat;
-    private List<EmployeeDocuments> employeeDocumentsList;
+    private List<EmployeeDocument> employeeDocumentList;
 }

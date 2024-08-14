@@ -15,11 +15,9 @@ public class GarageCat {
     private List<Mannager> mannager;
     private Integer grade;
     private ContactData contactData;
-    /// idcatalogo // taller // documento
-    private List<DocumentsCat> documentsCatList;
-    /// idServico // taller // precio // material
-    private List<ServiceCat> servicesList;
-    private List<Budget> budgetList;
+    private List<GarageDocument> garageDocumentList;
+    private List<GarageService> garageServiceList;
+    private List<GarageBudget> garageBudgetList;
     private Integer totalCustomers;
     private Integer newCustomers;
     /// agregar lista de empleados y sueldos // para punto de equilibrio // fecha de pago

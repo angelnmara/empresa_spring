@@ -1,7 +1,7 @@
 package com.lamarrulla.empresa.service;
 
-import com.lamarrulla.empresa.dto.CustomerDto;
+import com.lamarrulla.empresa.dto.CustomerCatDto;
 
 public interface ICustomerService {
-    CustomerDto save(CustomerDto customerDto);
+    CustomerCatDto save(CustomerCatDto customerCatDto);
 }

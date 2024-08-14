@@ -1,6 +1,6 @@
 package com.lamarrulla.empresa.controller;
 
-import com.lamarrulla.empresa.dto.EmployeeDto;
+import com.lamarrulla.empresa.dto.EmployeeCatDto;
 import com.lamarrulla.empresa.service.IEmployeeService;
 /*import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiResponse;
@@ -19,16 +19,16 @@ public class EmployeeController {
         this.iEmployeeService = iEmployeeService;
     }
     @GetMapping("/{id}")
-    public ResponseEntity<EmployeeDto> findById(@PathVariable Integer id){
+    public ResponseEntity<EmployeeCatDto> findById(@PathVariable Integer id){
         return ResponseEntity.ok(iEmployeeService.findById(id));
     }
     @PostMapping
-    public ResponseEntity<EmployeeDto> save(@RequestBody EmployeeDto employeeDto){
-        return ResponseEntity.ok(iEmployeeService.save(employeeDto));
+    public ResponseEntity<EmployeeCatDto> save(@RequestBody EmployeeCatDto employeeCatDto){
+        return ResponseEntity.ok(iEmployeeService.save(employeeCatDto));
     }
 
     @GetMapping
-    public ResponseEntity<List<EmployeeDto>> findAll(){
+    public ResponseEntity<List<EmployeeCatDto>> findAll(){
         return ResponseEntity.ok(iEmployeeService.findAll());
     }
 

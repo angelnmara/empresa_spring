@@ -1,8 +1,8 @@
 package com.lamarrulla.empresa.dto;
 
-public class CustomerDocumentsDto {
+public class GarageDocumentDto {
     private Long id;
-    private CustomerCatDto customerDto;
+    private GarageCatDto garageDto;
     private DocumentCatDto documentDto;
     private Boolean mandatory;
 }

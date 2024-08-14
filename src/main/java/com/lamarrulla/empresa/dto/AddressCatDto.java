@@ -11,5 +11,5 @@ public class AddressCatDto {
     private String externalNumber;
     private CityCat cityCat;
     private StateCat state;
-    private CountryCat countryCat;
+    private CountryCatDto countryDto;
 }
