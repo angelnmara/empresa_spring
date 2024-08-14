@@ -30,4 +30,9 @@ public class RoleCatMapperImpl implements IRoleCatMapper {
     public List<RoleCatDto> toDTOList(List<RoleCat> roleCats) {
         return roleCats.stream().map(this::toDTO).collect(Collectors.toList());
     }
+
+    @Override
+    public List<RoleCat> toEntityList(List<RoleCatDto> roleCatDtoList) {
+        return roleCatDtoList.stream().map(this::toEntity).collect(Collectors.toList());
+    }
 }

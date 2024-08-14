@@ -16,7 +16,7 @@ public class EmployeeCat {
     private PersonalData personalData;
     @OneToMany(fetch = FetchType.LAZY)
     @JoinColumn(name = "role_cat_id", referencedColumnName = "id")
-    private List<RoleCat> roleCat;
+    private List<RoleCat> roleCatList;
     private ContactData contactData;
     private CompanyCat companyCat;
     private List<EmployeeDocument> employeeDocumentList;

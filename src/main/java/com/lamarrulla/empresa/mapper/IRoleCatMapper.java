@@ -9,4 +9,5 @@ public interface IRoleCatMapper {
     RoleCatDto toDTO(RoleCat roleCat);
     RoleCat toEntity(RoleCatDto roleCatDto);
     List<RoleCatDto> toDTOList(List<RoleCat> roleCats);
+    List<RoleCat> toEntityList(List<RoleCatDto> roleCatDtoList);
 }

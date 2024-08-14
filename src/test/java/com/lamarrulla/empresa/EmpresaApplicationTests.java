@@ -58,7 +58,7 @@ class EmpresaApplicationTests {
 		PersonalData personalData = new PersonalData();
 		personalData.setId(1L);
 		employeeCat.setPersonalData(personalData);
-		employeeCat.setRoleCat(roleCats);
+		employeeCat.setRoleCatList(roleCats);
 		mockMvc.perform(post("/private/employee")
 						.contentType("application/json")
 						.param("id", "1")

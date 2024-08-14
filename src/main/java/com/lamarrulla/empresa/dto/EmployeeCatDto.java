@@ -8,9 +8,9 @@ import java.util.List;
 @Data
 public class EmployeeCatDto {
     private Long id;
-    private PersonalData personalData;
+    private PersonalDataDto personalDataDto;
     private List<RoleCatDto> roleDtoList;
-    private ContactData contactData;
-    private CompanyCat companyCat;
+    private ContactDataDto contactDataDto;
+    private CompanyCatDto companyCatDto;
     private List<EmployeeDocumentDto> employeeDocumentDtoList;
 }

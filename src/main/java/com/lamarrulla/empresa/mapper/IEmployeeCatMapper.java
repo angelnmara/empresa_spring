@@ -5,7 +5,7 @@ import com.lamarrulla.empresa.entity.EmployeeCat;
 
 import java.util.List;
 
-public interface IEmployeeMapper {
+public interface IEmployeeCatMapper {
     EmployeeCatDto toDTO(EmployeeCat employeeCat);
     EmployeeCat toEntity(EmployeeCatDto employeeCatDto);
     List<EmployeeCatDto> toDTOList(List<EmployeeCat> employeeCatList);
