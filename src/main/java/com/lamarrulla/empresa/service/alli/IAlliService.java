@@ -1,4 +1,4 @@
-package com.lamarrulla.empresa.service;
+package com.lamarrulla.empresa.service.alli;
 
 import com.lamarrulla.empresa.entity.alli.RespResult;
 import com.lamarrulla.empresa.entity.alli.Result;

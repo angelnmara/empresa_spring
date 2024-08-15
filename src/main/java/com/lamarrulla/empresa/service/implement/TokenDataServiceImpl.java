@@ -1,7 +1,7 @@
 package com.lamarrulla.empresa.service.implement;
 
 import com.lamarrulla.empresa.dto.dto.allidto.TokenDataDto;
-import com.lamarrulla.empresa.mapper.ITokenDataMapper;
+import com.lamarrulla.empresa.mapper.alli.ITokenDataMapper;
 import com.lamarrulla.empresa.repository.ITokenDataRepository;
 import com.lamarrulla.empresa.service.ITokenDataService;
 import org.springframework.stereotype.Service;

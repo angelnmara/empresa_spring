@@ -2,7 +2,7 @@ package com.lamarrulla.empresa.controller.alli;
 
 import com.lamarrulla.empresa.entity.alli.RespResult;
 import com.lamarrulla.empresa.entity.alli.Result;
-import com.lamarrulla.empresa.service.IAlliService;
+import com.lamarrulla.empresa.service.alli.IAlliService;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;

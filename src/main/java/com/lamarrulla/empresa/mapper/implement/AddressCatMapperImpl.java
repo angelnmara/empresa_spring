@@ -3,10 +3,11 @@ package com.lamarrulla.empresa.mapper.implement;
 import com.lamarrulla.empresa.dto.dto.AddressCatDto;
 import com.lamarrulla.empresa.entity.AddressCat;
 import com.lamarrulla.empresa.mapper.IAddressCatMapper;
+import org.springframework.stereotype.Component;
 
 import java.util.List;
 import java.util.stream.Collectors;
-
+@Component
 public class AddressCatMapperImpl implements IAddressCatMapper {
 
     private final CountryCatMapperImpl countryCatMapper;

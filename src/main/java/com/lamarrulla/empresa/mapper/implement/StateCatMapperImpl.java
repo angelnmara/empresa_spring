@@ -19,9 +19,9 @@ public class StateCatMapperImpl implements IStateCatMapper {
     @Override
     public StateCat toEntity(StateCatDto stateCatDto) {
         StateCat state = new StateCat();
-        state.setCode(stateCatDto.getStateCode());
-        state.setName(stateCatDto.getStateName());
-        state.setCountryCat(iCountryCatMapper.toEntity(stateCatDto.getCountryCatDto()));
+        state.setCode(stateCatDto.getCode());
+        state.setName(stateCatDto.getName());
+        state.setCountry(iCountryCatMapper.toEntity(stateCatDto.getCountryDto()));
         state.setId(stateCatDto.getId());
         return state;
     }
@@ -29,9 +29,9 @@ public class StateCatMapperImpl implements IStateCatMapper {
     @Override
     public StateCatDto toDto(StateCat state) {
         StateCatDto stateCatDto = new StateCatDto();
-        stateCatDto.setStateName(state.getName());
-        stateCatDto.setStateCode(state.getCode());
-        stateCatDto.setCountryCatDto(iCountryCatMapper.toDto(state.getCountryCat()));
+        stateCatDto.setName(state.getName());
+        stateCatDto.setCode(state.getCode());
+        stateCatDto.setCountryDto(iCountryCatMapper.toDto(state.getCountry()));
         stateCatDto.setId(state.getId());
         return stateCatDto;
     }

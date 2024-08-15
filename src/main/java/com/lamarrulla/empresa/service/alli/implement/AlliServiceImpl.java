@@ -1,4 +1,4 @@
-package com.lamarrulla.empresa.service.implement;
+package com.lamarrulla.empresa.service.alli.implement;
 
 import com.global.iop.api.IopClient;
 import com.global.iop.api.IopClientImpl;
@@ -13,7 +13,7 @@ import com.google.gson.JsonParser;
 import com.lamarrulla.empresa.dto.dto.allidto.TokenDataDto;
 import com.lamarrulla.empresa.entity.alli.RespResult;
 import com.lamarrulla.empresa.entity.alli.Result;
-import com.lamarrulla.empresa.service.IAlliService;
+import com.lamarrulla.empresa.service.alli.IAlliService;
 import com.lamarrulla.empresa.service.ITokenDataService;
 import org.springframework.stereotype.Service;
 import java.util.List;
