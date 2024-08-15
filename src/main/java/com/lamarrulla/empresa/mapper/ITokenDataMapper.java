@@ -1,7 +1,7 @@
 package com.lamarrulla.empresa.mapper;
 
-import com.lamarrulla.empresa.dto.AlliDto.TokenDataDto;
-import com.lamarrulla.empresa.entity.Alli.TokenData;
+import com.lamarrulla.empresa.dto.dto.allidto.TokenDataDto;
+import com.lamarrulla.empresa.entity.alli.TokenData;
 
 import java.util.List;
 

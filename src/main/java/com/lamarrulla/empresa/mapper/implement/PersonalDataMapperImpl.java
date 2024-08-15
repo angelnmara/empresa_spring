@@ -1,6 +1,6 @@
 package com.lamarrulla.empresa.mapper.implement;
 
-import com.lamarrulla.empresa.dto.PersonalDataDto;
+import com.lamarrulla.empresa.dto.dto.PersonalDataDto;
 import com.lamarrulla.empresa.entity.PersonalData;
 import com.lamarrulla.empresa.mapper.IPersonalDataMapper;
 import org.springframework.stereotype.Component;

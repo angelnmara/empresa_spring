@@ -1,6 +1,6 @@
 package com.lamarrulla.empresa.service.implement;
 
-import com.lamarrulla.empresa.dto.PersonalDataDto;
+import com.lamarrulla.empresa.dto.dto.PersonalDataDto;
 import com.lamarrulla.empresa.mapper.IPersonalDataMapper;
 import com.lamarrulla.empresa.repository.IPersonalDataRepository;
 import com.lamarrulla.empresa.service.IPersonalDataService;

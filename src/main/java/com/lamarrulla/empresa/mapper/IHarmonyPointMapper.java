@@ -1,6 +1,6 @@
 package com.lamarrulla.empresa.mapper;
 
-import com.lamarrulla.empresa.dto.HarmonyPointDto;
+import com.lamarrulla.empresa.dto.dto.HarmonyPointDto;
 import com.lamarrulla.empresa.entity.HarmonyPoint;
 
 import java.util.List;

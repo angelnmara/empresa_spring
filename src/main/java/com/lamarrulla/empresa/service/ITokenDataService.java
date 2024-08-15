@@ -1,6 +1,6 @@
 package com.lamarrulla.empresa.service;
 
-import com.lamarrulla.empresa.dto.AlliDto.TokenDataDto;
+import com.lamarrulla.empresa.dto.dto.allidto.TokenDataDto;
 
 import java.util.List;
 

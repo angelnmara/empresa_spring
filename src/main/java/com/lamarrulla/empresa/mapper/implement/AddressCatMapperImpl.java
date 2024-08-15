@@ -1,6 +1,6 @@
 package com.lamarrulla.empresa.mapper.implement;
 
-import com.lamarrulla.empresa.dto.AddressCatDto;
+import com.lamarrulla.empresa.dto.dto.AddressCatDto;
 import com.lamarrulla.empresa.entity.AddressCat;
 import com.lamarrulla.empresa.mapper.IAddressCatMapper;
 

@@ -1,6 +1,6 @@
 package com.lamarrulla.empresa.mapper.implement;
 
-import com.lamarrulla.empresa.dto.CountryCatDto;
+import com.lamarrulla.empresa.dto.dto.CountryCatDto;
 import com.lamarrulla.empresa.entity.CountryCat;
 import com.lamarrulla.empresa.mapper.ICountryCatMapper;
 import org.springframework.stereotype.Component;

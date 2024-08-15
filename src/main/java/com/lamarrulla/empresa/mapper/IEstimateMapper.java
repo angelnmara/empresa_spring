@@ -1,6 +1,6 @@
 package com.lamarrulla.empresa.mapper;
 
-import com.lamarrulla.empresa.dto.EstimateDto;
+import com.lamarrulla.empresa.dto.dto.EstimateDto;
 import com.lamarrulla.empresa.entity.Estimate;
 
 import java.util.List;

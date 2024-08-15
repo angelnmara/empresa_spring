@@ -1,0 +1,9 @@
+package com.lamarrulla.empresa.dto.dto;
+
+import lombok.Data;
+
+@Data
+public class TitleCatDto {
+    private Long id;
+    private String name;
+}

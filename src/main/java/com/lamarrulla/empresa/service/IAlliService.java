@@ -1,7 +1,7 @@
 package com.lamarrulla.empresa.service;
 
-import com.lamarrulla.empresa.entity.Alli.RespResult;
-import com.lamarrulla.empresa.entity.Alli.Result;
+import com.lamarrulla.empresa.entity.alli.RespResult;
+import com.lamarrulla.empresa.entity.alli.Result;
 
 public interface IAlliService {
     Result getProductsById(String id);

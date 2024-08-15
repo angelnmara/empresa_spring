@@ -1,6 +1,6 @@
 package com.lamarrulla.empresa.mapper.implement;
 
-import com.lamarrulla.empresa.dto.EmployeeCatDto;
+import com.lamarrulla.empresa.dto.dto.EmployeeCatDto;
 import com.lamarrulla.empresa.entity.EmployeeCat;
 import com.lamarrulla.empresa.mapper.IEmployeeCatMapper;
 import org.springframework.stereotype.Component;

@@ -1,6 +1,6 @@
 package com.lamarrulla.empresa.controller;
 
-import com.lamarrulla.empresa.dto.CountryCatDto;
+import com.lamarrulla.empresa.dto.dto.CountryCatDto;
 import com.lamarrulla.empresa.service.ICountryCatService;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;

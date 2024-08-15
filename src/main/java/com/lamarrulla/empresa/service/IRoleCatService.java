@@ -1,6 +1,6 @@
 package com.lamarrulla.empresa.service;
 
-import com.lamarrulla.empresa.dto.RoleCatDto;
+import com.lamarrulla.empresa.dto.dto.RoleCatDto;
 
 import java.util.List;
 

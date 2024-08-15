@@ -1,6 +1,6 @@
 package com.lamarrulla.empresa.service.implement;
 
-import com.lamarrulla.empresa.dto.CustomerCatDto;
+import com.lamarrulla.empresa.dto.dto.CustomerCatDto;
 import com.lamarrulla.empresa.repository.ICustomerRepository;
 import com.lamarrulla.empresa.service.ICustomerService;
 

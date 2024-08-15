@@ -1,7 +1,7 @@
 package com.lamarrulla.empresa.entity;
 
-import com.lamarrulla.empresa.dto.BudgetCatDto;
-import com.lamarrulla.empresa.dto.GarageCatDto;
+import com.lamarrulla.empresa.dto.dto.BudgetCatDto;
+import com.lamarrulla.empresa.dto.dto.GarageCatDto;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;

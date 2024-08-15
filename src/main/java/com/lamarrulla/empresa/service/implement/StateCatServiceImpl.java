@@ -1,6 +1,6 @@
 package com.lamarrulla.empresa.service.implement;
 
-import com.lamarrulla.empresa.dto.StateCatDto;
+import com.lamarrulla.empresa.dto.dto.StateCatDto;
 import com.lamarrulla.empresa.mapper.IStateCatMapper;
 import com.lamarrulla.empresa.repository.IStateCatRepository;
 import com.lamarrulla.empresa.service.IStateCatService;
