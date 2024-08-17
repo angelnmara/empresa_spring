@@ -1,6 +1,6 @@
 package com.lamarrulla.empresa.controller;
 
-import com.lamarrulla.empresa.dto.dto.EmployeeCatDto;
+import com.lamarrulla.empresa.dto.EmployeeCatDto;
 import com.lamarrulla.empresa.service.IEmployeeService;
 /*import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiResponse;

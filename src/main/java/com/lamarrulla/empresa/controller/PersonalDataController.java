@@ -1,6 +1,6 @@
 package com.lamarrulla.empresa.controller;
 
-import com.lamarrulla.empresa.dto.dto.PersonalDataDto;
+import com.lamarrulla.empresa.dto.PersonalDataDto;
 import com.lamarrulla.empresa.service.IPersonalDataService;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;

@@ -1,6 +1,6 @@
 package com.lamarrulla.empresa.service.implement;
 
-import com.lamarrulla.empresa.dto.dto.EmployeeCatDto;
+import com.lamarrulla.empresa.dto.EmployeeCatDto;
 import com.lamarrulla.empresa.mapper.IEmployeeCatMapper;
 import com.lamarrulla.empresa.repository.IEmployeeRepository;
 import com.lamarrulla.empresa.service.IEmployeeService;

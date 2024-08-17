@@ -1,6 +1,6 @@
 package com.lamarrulla.empresa.mapper;
 
-import com.lamarrulla.empresa.dto.dto.ScheduleDto;
+import com.lamarrulla.empresa.dto.ScheduleDto;
 import com.lamarrulla.empresa.entity.Schedule;
 
 import java.util.List;

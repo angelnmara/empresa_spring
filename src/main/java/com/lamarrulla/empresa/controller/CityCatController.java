@@ -1,6 +1,6 @@
 package com.lamarrulla.empresa.controller;
 
-import com.lamarrulla.empresa.dto.dto.CityCatDto;
+import com.lamarrulla.empresa.dto.CityCatDto;
 import com.lamarrulla.empresa.service.ICityCatService;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;

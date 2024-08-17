@@ -1,6 +1,6 @@
 package com.lamarrulla.empresa.service;
 
-import com.lamarrulla.empresa.dto.dto.AddressCatDto;
+import com.lamarrulla.empresa.dto.AddressCatDto;
 
 import java.util.List;
 

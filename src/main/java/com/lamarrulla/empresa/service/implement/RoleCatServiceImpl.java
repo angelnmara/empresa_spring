@@ -1,6 +1,6 @@
 package com.lamarrulla.empresa.service.implement;
 
-import com.lamarrulla.empresa.dto.dto.RoleCatDto;
+import com.lamarrulla.empresa.dto.RoleCatDto;
 import com.lamarrulla.empresa.mapper.IRoleCatMapper;
 import com.lamarrulla.empresa.repository.IRoleCatRepository;
 import com.lamarrulla.empresa.service.IRoleCatService;

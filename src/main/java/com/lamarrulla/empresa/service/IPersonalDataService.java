@@ -1,6 +1,6 @@
 package com.lamarrulla.empresa.service;
 
-import com.lamarrulla.empresa.dto.dto.PersonalDataDto;
+import com.lamarrulla.empresa.dto.PersonalDataDto;
 
 import java.util.List;
 

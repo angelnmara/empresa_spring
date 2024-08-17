@@ -1,6 +1,6 @@
 package com.lamarrulla.empresa.mapper.implement;
 
-import com.lamarrulla.empresa.dto.dto.StateCatDto;
+import com.lamarrulla.empresa.dto.StateCatDto;
 import com.lamarrulla.empresa.entity.StateCat;
 import com.lamarrulla.empresa.mapper.ICountryCatMapper;
 import com.lamarrulla.empresa.mapper.IStateCatMapper;

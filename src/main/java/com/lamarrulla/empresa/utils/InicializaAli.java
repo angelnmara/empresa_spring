@@ -7,7 +7,7 @@ import com.global.iop.api.IopClientImpl;
 import com.global.iop.api.IopRequest;
 import com.global.iop.api.IopResponse;
 import com.global.iop.domain.Protocol;
-import com.lamarrulla.empresa.dto.dto.allidto.TokenDataDto;
+import com.lamarrulla.empresa.dto.allidto.TokenDataDto;
 import com.lamarrulla.empresa.service.ITokenDataService;
 import jakarta.annotation.PostConstruct;
 import org.springframework.stereotype.Component;

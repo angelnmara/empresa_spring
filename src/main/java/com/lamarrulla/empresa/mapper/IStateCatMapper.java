@@ -1,6 +1,6 @@
 package com.lamarrulla.empresa.mapper;
 
-import com.lamarrulla.empresa.dto.dto.StateCatDto;
+import com.lamarrulla.empresa.dto.StateCatDto;
 import com.lamarrulla.empresa.entity.StateCat;
 import java.util.List;
 
