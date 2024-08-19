@@ -1,9 +1,6 @@
 package com.lamarrulla.empresa.entity;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 import lombok.Data;
 
 @Data
@@ -15,7 +12,7 @@ public class AddressCat {
     private String street;
     private String internalNumber;
     private String externalNumber;
+    @OneToOne
+    @JoinColumn(name = "address_cat_city_cat_id", nullable = false)
     private CityCat city;
-    private StateCat state;
-    private CountryCat country;
 }

@@ -1,9 +1,6 @@
 package com.lamarrulla.empresa.entity;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 import lombok.Data;
 
 @Data
@@ -15,7 +12,11 @@ public class PersonalData {
     private String firstName;
     private String middleName;
     private String lastName;
+    @OneToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "gender_id", referencedColumnName = "id")
     private GenderCat genderCat;
     private Integer age;
+    @OneToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "contact_data_id", referencedColumnName = "id")
     private ContactData contactData;
 }

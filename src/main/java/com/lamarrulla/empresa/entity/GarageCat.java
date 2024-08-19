@@ -1,9 +1,6 @@
 package com.lamarrulla.empresa.entity;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 import lombok.Data;
 
 import java.util.List;
@@ -14,12 +11,24 @@ public class GarageCat {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String name;
+    @OneToMany
+    @JoinColumn(name = "address_cat_garage_cat_id", nullable = false)
     private List<AddressCat> addressList;
+    @OneToMany
+    @JoinColumn(name = "mannager_garage_cat_id", nullable = false)
     private List<Mannager> mannager;
     private Integer grade;
+    @OneToOne
+    @JoinColumn(name = "contact_data_garage_cat_id", nullable = false)
     private ContactData contactData;
+    @OneToMany
+    @JoinColumn(name = "garage_document_garage_cat_id", nullable = false)
     private List<GarageDocument> garageDocumentList;
+    @OneToMany
+    @JoinColumn(name = "garage_service_garage_cat_id", nullable = false)
     private List<GarageService> garageServiceList;
+    @OneToMany
+    @JoinColumn(name = "garage_budget_garage_cat_id", nullable = false)
     private List<GarageBudget> garageBudgetList;
     private Integer totalCustomers;
     private Integer newCustomers;

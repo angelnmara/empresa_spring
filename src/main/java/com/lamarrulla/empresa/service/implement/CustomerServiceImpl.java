@@ -1,14 +1,14 @@
 package com.lamarrulla.empresa.service.implement;
 
 import com.lamarrulla.empresa.dto.CustomerCatDto;
-import com.lamarrulla.empresa.repository.ICustomerRepository;
+import com.lamarrulla.empresa.repository.ICustomerCatRepository;
 import com.lamarrulla.empresa.service.ICustomerService;
 
 public class CustomerServiceImpl implements ICustomerService {
-    private final ICustomerRepository iCustomerRepository;
+    private final ICustomerCatRepository iCustomerCatRepository;
 
-    public CustomerServiceImpl(ICustomerRepository iCustomerRepository) {
-        this.iCustomerRepository = iCustomerRepository;
+    public CustomerServiceImpl(ICustomerCatRepository iCustomerCatRepository) {
+        this.iCustomerCatRepository = iCustomerCatRepository;
     }
 
     @Override

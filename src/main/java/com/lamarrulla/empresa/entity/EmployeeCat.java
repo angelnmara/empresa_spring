@@ -17,7 +17,13 @@ public class EmployeeCat {
     @OneToMany(fetch = FetchType.LAZY)
     @JoinColumn(name = "role_cat_id", referencedColumnName = "id")
     private List<RoleCat> roleCatList;
+    @OneToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "contact_data_id", referencedColumnName = "id")
     private ContactData contactData;
+    @OneToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "company_id", referencedColumnName = "id")
     private CompanyCat companyCat;
+    @OneToMany(fetch = FetchType.LAZY)
+    @JoinColumn(name = "employee_document_id", referencedColumnName = "id")
     private List<EmployeeDocument> employeeDocumentList;
 }

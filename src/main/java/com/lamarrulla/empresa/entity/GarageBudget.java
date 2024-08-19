@@ -1,11 +1,6 @@
 package com.lamarrulla.empresa.entity;
 
-import com.lamarrulla.empresa.dto.BudgetCatDto;
-import com.lamarrulla.empresa.dto.GarageCatDto;
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 import lombok.Data;
 
 @Data
@@ -14,6 +9,10 @@ public class GarageBudget {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    private GarageCatDto garage;
-    private BudgetCatDto budgetCat;
+    @OneToOne
+    @JoinColumn(name = "garage_cat_id", nullable = false)
+    private GarageCat garage;
+    @OneToOne
+    @JoinColumn(name = "budget_cat_id", nullable = false)
+    private BudgetCat budgetCat;
 }

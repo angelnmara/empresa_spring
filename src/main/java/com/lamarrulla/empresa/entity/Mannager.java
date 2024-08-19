@@ -1,9 +1,6 @@
 package com.lamarrulla.empresa.entity;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 import lombok.Data;
 
 @Data
@@ -12,6 +9,10 @@ public class Mannager {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+    @OneToOne
+    @JoinColumn(name = "personal_data_mannager_id", nullable = false)
     private PersonalData mannager;
+    @OneToOne
+    @JoinColumn(name = "contact_data_mannager_id", nullable = false)
     private ContactData contactData;
 }

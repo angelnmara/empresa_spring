@@ -1,9 +1,6 @@
 package com.lamarrulla.empresa.entity;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 import lombok.Data;
 
 @Data
@@ -12,7 +9,11 @@ public class GarageDocument {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+    @OneToOne
+    @JoinColumn(name = "garage_id", nullable = false)
     private GarageCat garage;
+    @OneToOne
+    @JoinColumn(name = "document_id", nullable = false)
     private DocumentCat document;
     private Boolean mandatory;
 }

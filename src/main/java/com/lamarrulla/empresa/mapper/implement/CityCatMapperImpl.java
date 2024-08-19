@@ -19,7 +19,7 @@ public class CityCatMapperImpl implements ICityCatMapper {
     @Override
     public CityCat toEntity(CityCatDto cityCatDto) {
         CityCat cityCat = new CityCat();
-        cityCat.setState(iStateCatMapper.toEntity(cityCatDto.getStateDto()));
+        //cityCat.setState(iStateCatMapper.toEntity(cityCatDto.getStateDto()));
         cityCat.setName(cityCatDto.getName());
         cityCat.setId(cityCatDto.getId());
         return cityCat;
@@ -29,7 +29,7 @@ public class CityCatMapperImpl implements ICityCatMapper {
     public CityCatDto toDto(CityCat cityCat) {
         CityCatDto cityCatDto = new CityCatDto();
         cityCatDto.setName(cityCat.getName());
-        cityCatDto.setStateDto(iStateCatMapper.toDto(cityCat.getState()));
+        //cityCatDto.setStateDto(iStateCatMapper.toDto(cityCat.getState()));
         cityCatDto.setId(cityCat.getId());
         return cityCatDto;
     }
