@@ -1,7 +1,9 @@
 package com.lamarrulla.empresa.dto;
 
-import java.util.List;
+import lombok.Data;
 
+import java.util.List;
+@Data
 public class GarageCatDto {
     private Long id;
     private String name;

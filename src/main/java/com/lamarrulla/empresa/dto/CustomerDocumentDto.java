@@ -1,6 +1,9 @@
 package com.lamarrulla.empresa.dto;
 
-public class CustomerDocumentsDto {
+import lombok.Data;
+
+@Data
+public class CustomerDocumentDto {
     private Long id;
     private CustomerCatDto customerDto;
     private DocumentCatDto documentDto;

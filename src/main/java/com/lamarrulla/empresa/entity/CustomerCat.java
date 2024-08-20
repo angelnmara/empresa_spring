@@ -20,10 +20,10 @@ public class CustomerCat {
     @JoinColumn(name = "title_cat_customer_cat_id", nullable = false)
     private TitleCat title;
     private Integer grade;
-    @OneToMany
+    /*@OneToMany
     @JoinColumn(name = "customer_vehicle_customer_cat_id", nullable = false)
     private List<CustomerVehicle> customerVehicleList;
     @OneToMany
     @JoinColumn(name = "document_cat_customer_cat_id", nullable = false)
-    private List<CustomerDocument> customerDocumentList;
+    private List<CustomerDocument> customerDocumentList;*/
 }

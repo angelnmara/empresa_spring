@@ -5,10 +5,11 @@ import com.lamarrulla.empresa.entity.BudgetCat;
 import com.lamarrulla.empresa.mapper.IBudgetCatMapper;
 import com.lamarrulla.empresa.mapper.ICustomerCatMapper;
 import com.lamarrulla.empresa.mapper.IGarageServiceMapper;
+import org.springframework.stereotype.Component;
 
 import java.util.List;
 import java.util.stream.Collectors;
-
+@Component
 public class BudgetCatMapperImpl implements IBudgetCatMapper {
 
     private final ICustomerCatMapper iCustomerCatMapper;
@@ -26,7 +27,7 @@ public class BudgetCatMapperImpl implements IBudgetCatMapper {
         budgetCat.setCost(budgetCatDto.getCost());
         budgetCat.setCustomer(iCustomerCatMapper.toEntity(budgetCatDto.getCustomerDto()));
         budgetCat.setGarageServiceList(iGarageServiceMapper.toEntityList(budgetCatDto.getGarageServiceDtoList()));
-        return null;
+        return budgetCat;
     }
 
     @Override
@@ -36,7 +37,7 @@ public class BudgetCatMapperImpl implements IBudgetCatMapper {
         budgetCatDto.setCustomerDto(iCustomerCatMapper.toDto(budgetCat.getCustomer()));
         budgetCatDto.setId(budgetCat.getId());
         budgetCatDto.setGarageServiceDtoList(iGarageServiceMapper.toDtoList(budgetCat.getGarageServiceList()));
-        return null;
+        return budgetCatDto;
     }
 
     @Override

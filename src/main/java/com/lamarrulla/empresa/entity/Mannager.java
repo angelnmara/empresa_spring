@@ -11,7 +11,7 @@ public class Mannager {
     private Long id;
     @OneToOne
     @JoinColumn(name = "personal_data_mannager_id", nullable = false)
-    private PersonalData mannager;
+    private PersonalData personalData;
     @OneToOne
     @JoinColumn(name = "contact_data_mannager_id", nullable = false)
     private ContactData contactData;

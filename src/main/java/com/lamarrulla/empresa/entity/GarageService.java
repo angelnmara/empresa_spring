@@ -20,6 +20,6 @@ public class GarageService {
     private Integer hourService;
     @OneToMany
     @JoinColumn(name = "garage_replacement_garage_service_id", nullable = false)
-    private List<GarageReplacementPart> replacementPartList;
+    private List<GarageReplacementPart> garageReplacementPartList;
     private Double costService;
 }
