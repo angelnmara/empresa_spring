@@ -1,4 +1,4 @@
 package com.lamarrulla.empresa.controller;
 
-public class CustumerCatController {
+public class CustomerCatController {
 }
