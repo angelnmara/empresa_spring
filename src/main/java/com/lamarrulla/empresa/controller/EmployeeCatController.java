@@ -11,11 +11,11 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("/private/employee")
-public class EmployeeController {
+@RequestMapping("/private/employee-cat")
+public class EmployeeCatController {
     private final IEmployeeService iEmployeeService;
 
-    public EmployeeController(IEmployeeService iEmployeeService) {
+    public EmployeeCatController(IEmployeeService iEmployeeService) {
         this.iEmployeeService = iEmployeeService;
     }
     @GetMapping("/{id}")
